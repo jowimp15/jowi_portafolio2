@@ -1,0 +1,113 @@
+@import "../../Portafolio.css";
+
+.footer-main{
+    position: relative;
+
+    min-height: 50vh;
+
+    background-color: var(--color-change);
+    background-image: linear-gradient(#000000ec, #000000ec);
+}
+.footer-content{
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+}
+.footer-main [class^="icon-"]{
+    display: block;
+    background-color: var(--color-change);
+    margin: 0 1rem;
+
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    transition:transform 0.3s ease;
+    cursor: pointer;
+}
+.footer-main [class^="icon-"]:hover{
+    transform: scale(1.2);
+}
+
+/********************** icons area ***************************/
+.icon-github{
+    width: 50px;
+    height: 50px;
+
+    -webkit-mask-image: url('../../assets/svg/github-icon.svg');
+    mask-image: url('../../assets/svg/github-icon.svg');
+}
+.icon-gmail{
+    width: 50px;
+    height: 50px;
+
+    -webkit-mask-image: url('../../assets/svg/gmail-icon.svg');
+    mask-image: url('../../assets/svg/gmail-icon.svg');
+}
+
+
+.footer-form{
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-contacts_container{
+    padding: 2rem;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+.footer-textarea_message{
+    width: 100%;
+    height: 70%;
+
+    font-size: var(--step-0);
+    
+    padding: 0.5rem;
+    color: var(--color);
+    background-color: transparent;
+    outline: none;
+    border: 5px solid var(--color-change);
+    border-radius: 20px;
+    resize: none;
+}
+.footer-textarea_message::-webkit-scrollbar{
+    background-color: transparent;
+    width: 5px;
+}
+.footer-textarea_message::-webkit-scrollbar-thumb{
+    background-color: var(--color-change);
+    border-radius: 10px;
+}
+.footer-submit{
+    width: 100%;
+    font-size: var(--step-1);
+    font-weight: 900;
+
+    background-color: transparent;
+    color: var(--color-change);
+
+    cursor: pointer;
+    border: none;
+    border: 5px solid var(--color-change);
+    border-radius: 20px;
+    padding: 0.5rem;
+    transition:background-color 0.3s ease, color 0.3s ease;
+}
+.footer-submit:hover{
+    background-color: var(--color-change);
+    color: black;
+}
+.footer-submit:active{
+    transform: scale(0.98);
+}
+.copiright_text{
+    margin: 3rem 0;
+    font-size: var(--step--2);
+}

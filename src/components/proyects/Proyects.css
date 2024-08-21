@@ -1,0 +1,36 @@
+@import "../../Portafolio.css";
+
+.proyect-section{
+    margin: 0 auto;
+    max-width: 1440px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.proyect-info_about_proyect{
+    width: 80%;
+    text-align: center;
+    margin-bottom: 10rem;
+}
+.proyect-container_proyects{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max-content, 700px));
+    grid-template-rows: repeat(auto-fit, minmax(max-content, 500px));
+    justify-content: center;
+    justify-items: center;
+    row-gap: 5rem;
+}
+
+  /*/////////////////// MEDIA QUERY //////////////////////////////*/
+
+    /***************************** movile */
+
+    @media screen and (max-width:576px){
+        .proyect-container_proyects{
+            grid-template-columns: 1fr;
+            grid-template-rows:1fr;
+        }
+    }

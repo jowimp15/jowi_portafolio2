@@ -1,0 +1,289 @@
+@import "../Portafolio.css";
+
+.main_header{
+    position: relative;
+    height:100vh;
+    max-height: 1080px;
+    background-color: var(--background-color);
+    background: 
+    linear-gradient(0deg,#000000af 0%, #000000af 100%),
+    radial-gradient(circle at top left, var(--color-change) 0%, var(--background-color) 50%);
+    background-repeat: no-repeat;
+}
+.main_header::after{
+    content: "";
+
+    position: absolute;
+    top: 50%;
+
+    width: 100%;
+    height: 5px;
+    background-color: var(--color-change);
+}
+.content_header{
+    position: relative;
+
+    width:100%;
+    max-width:1440px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/**********************************************nav */
+
+.menu{
+    position:absolute;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.ancle_container{
+    position: relative;
+
+    display: flex;
+}
+.ancle_container a{
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000027;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.icon_theme{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 900;
+
+    padding: 1rem;
+    font-size: var(--step-2);
+
+    color: var(--color);
+    cursor: pointer;
+}
+.icon_theme:hover{
+    filter:drop-shadow(1px 1px 15px var(--color-change));
+    transition:filter 0.5s ease ;
+}
+.menu a:hover{
+    color: black;
+    background-color: var(--color-change);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/********************************************** img and h1 */
+.container_presentation{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container_img_jowi{
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    z-index: 200;
+
+    width: 200px;
+    height: 200px;
+
+    transform: translateY(-105px);
+    background-color: var(--background-color-dark);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--color-change);
+}
+.img_jowi{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container_main_title{
+    position: absolute;
+    right: 10%;
+    top: 50%;
+
+    transform: translateY(-115px);
+}
+
+/********************************************** description */
+.container_description{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+
+    transform: translateY(115px);
+}
+
+/********************************************** theme color */
+
+.container-theme_color{
+    position: absolute;
+    top: -10rem;
+    opacity: 0;
+    right:0;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(max-content, 1fr));
+    justify-items: center;
+    align-items: center;
+    width: 150px;
+    height: 100px;
+
+    border-radius: 10px;
+    border: 2px solid var(--color-change);
+    padding: 0.5rem;
+    transition: top 0.5s ease, opacity 0.5s ease;
+}
+[class^="theme_"]{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    border-radius: 50%;
+    border: none;
+}
+.theme_1{
+    background-color: var(--background-color1);
+}
+.theme_2{
+    background-color: var(--background-color2);
+}
+.theme_3{
+    background-color: var(--background-color3);
+}
+.theme_4{
+    background-color: var(--background-color4);
+}
+.theme_5{
+    background-color: var(--background-color5);
+}
+.theme_active{
+    border: 3px solid var(--color);
+}
+/*------------------------- JS --------------------*/
+
+.container-theme_color_active{
+    opacity: 1;
+    top: 5rem;
+}
+/*/////////////////// MEDIA QUERY //////////////////////////////*/
+
+
+/***************************** small desktop */
+
+@media screen and (max-width:992px){
+
+    /*-----------------menu */
+
+    
+    .menu{
+        position:fixed;
+        top: -15rem;
+        z-index: 1000;
+        opacity: 0;
+
+        transition: top 0.5s ease, opacity 0.5s ease;
+    }
+    .ancle_container{
+        flex-direction: column;
+
+        max-width: 576px;
+        width: 100%;
+    }
+    .ancle_container a{
+        padding: 1rem 0;
+        width: 100%;
+
+        background-color: #0000009c;
+    }   
+    .container_icon_menu{
+        position: fixed;
+        top: 0;
+        left: 50%;
+        z-index: 800;
+        text-align: center;
+
+        background-color: #0000009c;
+        transform: translateX(-50%);
+
+    } 
+    .icon-menu, .icon-close_menu{
+        display: block;
+        font-size: 52px;
+        color: var(--color);
+        
+        max-width: 576px;
+        width: 100vw;
+    }
+    .menu_active{
+        top: 3.7rem;
+        opacity: 1;
+    }
+}
+
+/***************************** tablet */
+
+@media screen and (max-width:768px){
+    
+/*---------------------------------------- header */
+    .content_header{
+        justify-content: center;
+    }
+    .main_header::after{
+        display: none;
+    }
+    .container_img_jowi{
+        width: 150px;
+        height: 150px;
+    }
+
+/*---------------------------------------- title and img */
+
+    .container_presentation{
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container_img_jowi{
+        position: static;
+        transform: translateY(0);
+    }
+    .container_main_title{
+        position: static;
+        transform: translateY(0);
+    }
+    .container_description{
+        position: static;
+        text-align: center;
+        transform: translateY(0);
+    }
+}
+
+/***************************** movile */
+
+@media screen and (max-width:576px){
+    .menu{
+        position:fixed;
+    }
+    .container-theme_color{
+        display: flex;
+        width: auto;
+        height: auto;
+        right: 50%;
+
+        transform: translateX(50%);
+    }
+    [class^="theme_"]{
+        margin: 0.5rem;
+    }
+    .container-theme_color_active{
+        top: 4rem;
+    }
+}

@@ -1,0 +1,25 @@
+@import "../Portafolio.css";
+
+.principal_main{
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 50vh;
+    max-height: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.about_me_text{
+    width: 80%;
+}
+
+/*/////////////////// MEDIA QUERY //////////////////////////////*/
+
+
+/***************************** movile */
+
+@media screen and (max-width:576px){
+    .principal_main{
+        height: max-content;
+    }
+}

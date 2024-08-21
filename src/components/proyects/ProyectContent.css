@@ -1,0 +1,94 @@
+@import "./../../Portafolio.css";
+
+.proyect-container_content{    
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    box-shadow: 5px 5px 10px 1px var(--background-color);
+    background-image: linear-gradient(300deg, var(--background-color) 0%, var(--background-color-dark) 30%);
+    transition:box-shadow 0.5s ease, transform 0.5s ease;
+
+}
+.proyect-container_content:hover{
+    box-shadow: 5px 5px 5px 1px var(--color-change);
+    transform: translateX(-5px) translateY(-5px);
+}
+.proyect-img_container{
+    position: relative;
+
+    width: 100%;
+    height: 50%;
+}
+.proyect-img_container::after{
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( #00000028 0%,  #000000 100%);
+}
+.proyect-title{
+    position: absolute;
+    bottom: 0;
+    z-index: 20;
+
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.proyect-img{
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+    object-position: top;
+}
+.proyect-description_container{
+    display: flex;
+    height: 50%;
+}
+.proyect-description{
+    overflow-y: auto;
+    white-space: pre-line;
+
+    font-size: var(--step--2);
+    margin: 0;
+    padding: 1rem;
+}
+.proyect-description::-webkit-scrollbar{
+    background-color: transparent;
+    width: 5px;
+}
+.proyect-description::-webkit-scrollbar-thumb{
+    background-color: #ffffff80;
+    border-radius: 20px;
+}
+
+  /*/////////////////// MEDIA QUERY //////////////////////////////*/
+
+    /***************************** movile */
+
+    @media screen and (max-width:576px){
+        .proyect-container_content{    
+            width: 100%;
+            height: 100%;
+            max-width: 300px;
+            max-height: 400px;
+        }
+        .proyect-title{
+            font-size: var(--step-1);
+        }
+        .proyect-description{
+            font-size: var(--step--3);
+        }
+    }
