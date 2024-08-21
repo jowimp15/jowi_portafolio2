@@ -8,6 +8,7 @@ export default defineConfig({
     host: true,
   },
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    base: '/jowi_portafolio2/'
   }
 })
