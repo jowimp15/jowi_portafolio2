@@ -109,7 +109,7 @@ export default function Main_header(){
             </nav>
             <div className="container_presentation">
                 <div className="container_img_jowi">
-                    <img src="./assets/escudo.jpg" alt="jowi medina" className="img_jowi"/>
+                    <img src="assets/escudo.jpg" alt="jowi medina" className="img_jowi"/>
                 </div>
                 <div className="container_main_title">
                     <h1 className="principal_title">Jowi Medina</h1>
