@@ -3,7 +3,7 @@ import "./ProyectContent.css"
 export default function ProyectContent({title, description, img, children, url}){
 
 return(
-<a href={url} target="_blank" >
+<a href={url} target="_blank" className="proyect_ancle">
     <article className="proyect-container_content">
         <div className="proyect-img_container">
             <h3 className="proyect-title">{title}</h3>

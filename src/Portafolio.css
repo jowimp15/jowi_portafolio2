@@ -28,7 +28,13 @@
   }
 
   /***************** RESET ******************/
-
+body::-webkit-scrollbar{
+  background-color: #00000083;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: var(--color-change);
+  border-radius: 20px;
+}
   h1{
     font-size: var(--step-5);
   }
@@ -56,6 +62,7 @@
   * ::after, ::before{
     box-sizing: border-box;
   }
+
   body{
     margin: 0;
     background-color: var(--background-color-dark);

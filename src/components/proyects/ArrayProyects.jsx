@@ -47,7 +47,10 @@ export default function ArrayProyects(){
 
         {/* ---- */}
 
-        
         <ProyectContent title="TVshow" img="assets/MyProyects/TVshow.jpg" description={`Es donde puedes buscar series de televisión, también tiene un mecanismo de guardado. Este proyecto lo hice principalmente para pulir mi conocimiento con las API. Está conectado a la API de la página de TVmaze.`} url="https://jowimp15.github.io/tvshow/"></ProyectContent>
+
+        {/* ---- */}
+
+        <ProyectContent title="Primer Portafolio" img="assets/MyProyects/portafolio.jpg" description={`Este fue mi primer portafolio; aún no está terminado porque le faltan muchos detalles, como la opción de desactivar las animaciones, redimensionar las imágenes de las páginas de terceros y adaptar su contenedor a su tamaño, entre otras cosas. Me desanimé, así que decidí crear otro portafolio más sencillo de leer y entender, que es el actual que estoy usando. Sin embargo, eso no significa que lo dejaré ahí, ya que lo retomaré después, al igual que todos mis proyectos pendientes. Decidí dejar mi primer portafolio como un proyecto, ya que me costó mucho hacerlo.`} url="https://jowimp15.github.io/jowi_portafolio/"></ProyectContent>
     </>)
 }

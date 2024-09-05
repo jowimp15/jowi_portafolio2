@@ -1,7 +1,37 @@
+import { useEffect } from "react"
 import ArrayProyects from "./ArrayProyects.jsx"
 import "./Proyects.css"
 
 export default function Proyects(){
+
+    useEffect(()=>{
+        let pageObserver = document.querySelectorAll(".proyect_ancle")
+        let arrayProyects = Array.from(document.querySelector(".proyect-container_proyects").children)
+
+        arrayProyects.forEach((el, index)=>{
+            el.setAttribute("id",`is_observer_${index}`)
+        })
+
+        const optionObserver = {
+            root:null,
+            rootMargin:"0px",
+            threshold:0.2,
+        }
+    
+        function observerCallback(entries, watch){
+            entries.forEach((entry)=>{
+                if(entry.isIntersecting){
+                    document.getElementById(entry.target.id).classList.add("is_observer")
+                }
+            })
+        }
+        
+        let watch = new IntersectionObserver(observerCallback,optionObserver)
+
+        pageObserver.forEach((el)=>{
+            watch.observe(el)
+        })
+    })
 
     return(
     <section className="proyect-section">

@@ -14,7 +14,7 @@ return (
   <Main_header/>
   <TopicsComponent textTopics="Sobre mi" IDSection="about_me"/>
   <Presentation/>
-  <TopicsComponent textTopics="Paginas de tercero" IDSection="pages"/>
+  <TopicsComponent textTopics="Página de tercero" IDSection="pages"/>
   <Pages/>
   <TopicsComponent textTopics="Mis Proyectos" IDSection="proyects"/>
   <Proyects/>

@@ -1,5 +1,17 @@
 @import "./../../Portafolio.css";
 
+@keyframes isObserver {
+    from{
+        opacity: 0;
+        transform: scale(0.9) translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1) translateY(0);
+
+    }
+}
+
 .proyect-container_content{    
     width: 600px;
     height: 500px;
@@ -73,6 +85,15 @@
     background-color: #ffffff80;
     border-radius: 20px;
 }
+.proyect_ancle{
+    opacity: 0;
+    transform: scale(0.9) translateY(100px);
+}
+/* ----------------------------js ----------------------------*/
+
+.is_observer{
+    animation: isObserver 1.5s ease forwards;
+}
 
   /*/////////////////// MEDIA QUERY //////////////////////////////*/
 
@@ -80,10 +101,13 @@
 
     @media screen and (max-width:576px){
         .proyect-container_content{    
-            width: 100%;
-            height: 100%;
-            max-width: 300px;
+            width: 90%;
+            height: 90%;
             max-height: 400px;
+        }
+        .proyect_ancle{
+            display: flex;
+            justify-content: center;
         }
         .proyect-title{
             font-size: var(--step-1);

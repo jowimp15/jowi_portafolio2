@@ -1,17 +1,17 @@
 import { useState } from "react";
 import "./ContentPages.css";
 
-export default function ContentPages({img, title, description, getDescription, getTitleText}){
-    const [parentElement, setPrentElement] = useState("")
+export default function ContentPages({img, title, description, getDescription, getTitleText, getUrlPage, url}){
+    const [parentElement, setParentElement] = useState("")
 
     function handlerGetElements(e){
-        setPrentElement(e.currentTarget)
+        setParentElement(e.currentTarget)
         getDescription(description)
         getTitleText(title)
+        getUrlPage(url)
 
         let arrayImage = Array.from(document.querySelectorAll(".content-page_img"))
         let arrayTitle = Array.from(document.querySelectorAll(".content-page_title"))
-
 
         for (const el of arrayImage) {
             el.classList.remove("change_position_img")
