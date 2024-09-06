@@ -13,6 +13,7 @@ export default function Footer(){
                 <textarea name="send_gmail" className="footer-textarea_message" title="insertar un texto para enviar"></textarea>
                 <input type="submit" className="footer-submit" value="enviar"/>
             </form> */}
+            <a href="assets/CV_Tecnico.pdf" target="_blank" className="CV">Mi Curriculum vitae</a>
             <p className="copiright_text">©jowi Medina 2024 - Todos los derechos reservados</p>
         </div>
     </footer>)
