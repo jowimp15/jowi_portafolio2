@@ -6,8 +6,8 @@ export default function Footer(){
         <div className="footer-content">
             <div className="footer-contacts_container">
                 <a href="https://github.com/jowimp15" target="_blank" className="icon-github"></a>
-
                 <a href="mailto:jowimp15@gmail.com?subject=Asunto%20del%20Correo" target="_blank" className="icon-gmail"></a>
+                <a href="https://www.linkedin.com/in/jowi-medina-peralta-2092292b8/" target="_blank" className="icon-linkedin"></a>
             </div>
             {/* <form action="" className="footer-form">
                 <textarea name="send_gmail" className="footer-textarea_message" title="insertar un texto para enviar"></textarea>
