@@ -116,7 +116,7 @@ export default function Main_header(){
                 </div>
             </div>
             <div className="container_description">
-                    <h2 className="description_text_header">Desarrollador Junior Frontend Developert</h2>
+                    <h2 className="description_text_header">Junior Frontend Developert</h2>
             </div>
         </div>
     </header>
