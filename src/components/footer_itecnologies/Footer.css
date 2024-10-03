@@ -113,9 +113,15 @@
     transform: scale(0.98);
 }
 .copiright_text{
+    
     margin: 3rem 0;
     font-size: var(--step--2);
 }
 .CV{
+    text-decoration: none;
+    padding: 1rem 0;
+}
+.CV:hover{
+    color: var(--color-change);
     text-decoration: underline;
 }
